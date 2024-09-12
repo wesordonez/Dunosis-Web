@@ -84,3 +84,64 @@ display: block;
 margin-top: 0.5rem;
 } 
   
+/* Services Section */
+
+.services-section {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .service-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .service-item .number {
+    font-size: 190px;
+    font-weight: 900;
+    margin-right: 20px;
+    color: #000;
+    position: relative;
+  }
+  
+  .service-item .content {
+    max-width: 600px;
+  }
+  
+  .service-item h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .service-item p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #555;
+  }
+  
+  .service-item:nth-child(1) .number::before,
+  .service-item:nth-child(2) .number::before,
+  .service-item:nth-child(3) .number::before {
+    content: '';
+    position: absolute;
+    left: -60px;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    background: url('../img/ccchaos.svg') no-repeat center center;
+    background-size: cover;
+  }
+  
+  .service-item:nth-child(2) .number::before {
+    background: url('../img/ccchaos-2.svg') no-repeat center center;
+  }
+  
+  .service-item:nth-child(3) .number::before {
+    background: url('../img/ccchaos.svg') no-repeat center center;
+  }
