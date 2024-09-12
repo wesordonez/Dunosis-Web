@@ -12,6 +12,18 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
 /* Hero Section */
 
 .hero-section {
