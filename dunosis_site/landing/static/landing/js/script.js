@@ -11,6 +11,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Smooth scroll to top
+
+document.addEventListener('DOMContentLoaded', function() {
+    const toTopLink = document.querySelector('.header-logo');
+
+    toTopLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
+
 // Hide navbar, show on scroll down
 
 document.addEventListener('DOMContentLoaded', function() {
