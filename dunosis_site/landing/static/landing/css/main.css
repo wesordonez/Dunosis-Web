@@ -16,11 +16,21 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+/* Header */
+
 header {
+    display: none;
     padding: 20px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1000;
 }
 
 .logo img {
