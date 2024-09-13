@@ -14,15 +14,23 @@ document.addEventListener('DOMContentLoaded', function() {
 // Hide navbar, show on scroll down
 
 document.addEventListener('DOMContentLoaded', function() {
-    const header = document.querySelector('header');
+    const learnMoreLink = document.querySelector('.learn-more');
     const nextSection = document.querySelector('#services-section');
+    const header = document.querySelector('header');
+
+    learnMoreLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        nextSection.scrollIntoView({ behavior: 'smooth' });
+    });
 
     window.addEventListener('scroll', function() {
         const sectionTop = nextSection.getBoundingClientRect().top;
         if (sectionTop <= 0) {
-            header.style.display = 'flex';
+            header.classList.remove('header-hidden');
+            header.classList.add('header-visible');
         } else {
-            header.style.display = 'none';
+            header.classList.remove('header-visible');
+            header.classList.add('header-hidden');
         }
     });
 });
