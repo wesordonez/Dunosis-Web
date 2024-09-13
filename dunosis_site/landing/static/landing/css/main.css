@@ -149,3 +149,38 @@ margin-top: 0.5rem;
   .service-item:nth-child(3) .number::before {
     background: url('../img/ccchaos.svg') no-repeat center center;
   }
+
+/* Footer */
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+footer h1 {
+    font-size: 30px;
+    font-weight: 600;
+    padding: 50px;
+    margin-bottom: auto;
+}
+
+footer button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 50px;
+}
