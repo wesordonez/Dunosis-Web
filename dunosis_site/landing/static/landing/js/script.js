@@ -1,15 +1,16 @@
 
 // Smooth scroll to next section
+function onLearnMoreClick(event) {
+    document.addEventListener('DOMContentLoaded', function() {
+        const learnMoreLink = document.querySelector('.learn-more');
+        const nextSection = document.querySelector('#services-section');
 
-document.addEventListener('DOMContentLoaded', function() {
-    const learnMoreLink = document.querySelector('.learn-more');
-    const nextSection = document.querySelector('#services-section');
-
-    learnMoreLink.addEventListener('click', function(event) {
-        event.preventDefault();
-        nextSection.scrollIntoView({ behavior: 'smooth' });
+        learnMoreLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            nextSection.scrollIntoView({ behavior: 'smooth' });
+        });
     });
-});
+}
 
 // Smooth scroll to top
 
