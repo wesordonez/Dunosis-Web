@@ -228,6 +228,18 @@ margin-top: 0.5rem;
   .review-item {
     flex: 1 1 100%; /* Full width for smaller screens */
   }
+  .container {
+    padding: 0 15px;
+  }
+  body {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 16px;
+  }
 }
 
 /* Footer */
