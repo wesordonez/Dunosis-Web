@@ -23,12 +23,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Hide navbar, show on scroll down
+// Hide navbar menu, show on scroll down
 
 document.addEventListener('DOMContentLoaded', function() {
     const learnMoreLink = document.querySelector('.learn-more');
     const nextSection = document.querySelector('#services-section');
     const header = document.querySelector('header');
+    const navLinks = document.querySelector('.nav-links');
+    const logoText = document.querySelector('.logo-text');
 
     learnMoreLink.addEventListener('click', function(event) {
         event.preventDefault();
@@ -38,11 +40,15 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         const sectionTop = nextSection.getBoundingClientRect().top;
         if (sectionTop <= 0) {
-            header.classList.remove('header-hidden');
-            header.classList.add('header-visible');
+            navLinks.classList.add('hidden');
+            navLinks.classList.remove('visible');
+            logoText.classList.add('visible');
+            logoText.classList.remove('hidden');
         } else {
-            header.classList.remove('header-visible');
-            header.classList.add('header-hidden');
+            navLinks.classList.remove('hidden');
+            navLinks.classList.add('visible');
+            logoText.classList.remove('visible');
+            logoText.classList.add('hidden');
         }
     });
 });

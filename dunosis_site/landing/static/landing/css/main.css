@@ -19,9 +19,9 @@ body {
 /* Header */
 
 header {
-    display: none;
+    display: flex;
     padding: 20px;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     font-size: 20px;
     font-weight: 600;
@@ -35,6 +35,17 @@ header {
 .header-logo img {
     width: 50px;
     margin-right: 10px;
+}
+
+.header-logo .logo-text {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .header-logo .logo-text {
+      display: none;
+  }
 }
 
 @keyframes fadeIn {
@@ -55,13 +66,40 @@ header {
     }
 }
 
-.header-visible {
+.hidden {
+    display: none;
+    animation: fadeOut 0.5s forwards;
+}
+
+.visible {
     display: flex;
     animation: fadeIn 0.5s forwards;
 }
 
-.header-hidden {
-    animation: fadeOut 0.5s forwards;
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #999; 
+  text-decoration: underline;
 }
 
 /* Hero Section */
@@ -71,35 +109,23 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background: url('../img/oooscillate.svg') no-repeat center center; */
+    background: url('../img/oooscillate-final.svg') no-repeat center center;
     background-size: contain;
   }
-
-.hero-section::before {
-content: '';
-position: absolute;
-top: 30%;
-left: 50%;
-width: 120%;
-height: 100%;
-background: url('../img/oooscillate.svg') no-repeat center center;
-background-size: contain;
-transform: translate(-50%, -40%) rotate(-15deg); /* Adjust the rotation angle as needed */
-z-index: -1; /* Ensure the pseudo-element is behind the content */
-}
   
 .hero-content {
 max-width: 80%;
 text-align: center;
 }
 
-h1 {
-    font-size: 90px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 150px;
-  }
+.hero-title {
+  font-size: 90px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
   
 .subheading {
 font-size: 32px;
@@ -109,7 +135,7 @@ font-weight: 300;
 
 .learn-more {
 display: inline-block;
-margin-top: 15rem;
+margin-top: 5rem;
 font-size: 1rem;
 color: #999;
 text-decoration: none;
@@ -117,12 +143,20 @@ position: relative;
 }
 
 .learn-more::after {
-content: '\f107'; /* Font Awesome down arrow */
+content: '\f107'; /* FontAwesome arrow */
 font-family: "FontAwesome";
 font-size: 1.5rem;
 display: block;
 margin-top: 0.5rem;
 } 
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 60px;
+    margin-top: 100px;
+    margin-bottom: 250px;
+  }
+}
   
 /* Services Section */
 
@@ -164,6 +198,22 @@ margin-top: 0.5rem;
     line-height: 1.5;
     color: #555;
   }
+
+  @media (max-width: 768px) {
+    .service-item {
+      flex-direction: column;
+    }
+    .service-item .number > h1 {
+      font-size: 60px;
+      margin-bottom: 0px;
+    }
+    .service-item h2 {
+      font-size: 1.5rem;
+    }
+    .service-item p {
+      font-size: 1rem;
+    }
+  }
   
   .service-item:nth-child(1) .number::before,
   .service-item:nth-child(2) .number::before,
@@ -186,18 +236,27 @@ margin-top: 0.5rem;
     background: url('../img/ccchaos.svg') no-repeat center center;
   }
 
+  @media (max-width: 768px) {
+    .service-item:nth-child(1) .number::before,
+    .service-item:nth-child(2) .number::before,
+    .service-item:nth-child(3) .number::before {
+      left: -70px;
+      top: -50px;
+    }
+  }
+
 /* Reviews Section */
 
 .reviews-section {
   padding: 20px;
-  background-color: #f0f0f0; /* Adjust as needed */
+  background-color: #f0f0f0;
 }
 
 .reviews-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px; /* Adjust spacing between items */
+  gap: 20px;
 }
 
 .review-item {
