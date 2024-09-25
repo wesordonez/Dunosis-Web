@@ -70,6 +70,32 @@ header {
     animation: fadeOut 0.5s forwards;
 }
 
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333; /* Adjust color to match the website */
+  font-family: 'Montserrat', sans-serif; /* Ensure font matches */
+  font-weight: 200; /* Adjust font weight as needed */
+  padding: 10px 15px; /* Add padding for better click area */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav-links a:hover {
+  color: #999; /* Change color on hover to match website theme */
+  text-decoration: underline;
+}
+
 /* Hero Section */
 
 .hero-section {
