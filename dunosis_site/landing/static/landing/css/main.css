@@ -37,6 +37,12 @@ header {
     margin-right: 10px;
 }
 
+@media (max-width: 768px) {
+  .header-logo .logo-text {
+      display: none;
+  }
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
