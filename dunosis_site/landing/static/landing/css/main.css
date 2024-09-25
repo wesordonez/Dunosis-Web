@@ -37,6 +37,11 @@ header {
     margin-right: 10px;
 }
 
+.header-logo .logo-text {
+    font-size: 15px;
+    font-weight: 600;
+}
+
 @media (max-width: 768px) {
   .header-logo .logo-text {
       display: none;
