@@ -19,9 +19,9 @@ body {
 /* Header */
 
 header {
-    display: none;
+    display: flex;
     padding: 20px;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     font-size: 20px;
     font-weight: 600;
@@ -61,13 +61,14 @@ header {
     }
 }
 
-.header-visible {
-    display: flex;
-    animation: fadeIn 0.5s forwards;
+.hidden {
+    display: none;
+    animation: fadeOut 0.5s forwards;
 }
 
-.header-hidden {
-    animation: fadeOut 0.5s forwards;
+.visible {
+    display: flex;
+    animation: fadeIn 0.5s forwards;
 }
 
 .nav {
@@ -84,15 +85,15 @@ header {
 
 .nav-links a {
   text-decoration: none;
-  color: #333; /* Adjust color to match the website */
-  font-family: 'Montserrat', sans-serif; /* Ensure font matches */
-  font-weight: 200; /* Adjust font weight as needed */
-  padding: 10px 15px; /* Add padding for better click area */
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #999; /* Change color on hover to match website theme */
+  color: #999; 
   text-decoration: underline;
 }
 
@@ -106,19 +107,6 @@ header {
     background: url('../img/oooscillate-final.svg') no-repeat center center;
     background-size: contain;
   }
-
-/* .hero-section::before {
-content: '';
-position: absolute;
-top: 30%;
-left: 50%;
-width: 120%;
-height: 100%;
-/* background: url('../img/oooscillate.svg') no-repeat center center; */
-/* background-size: contain;
-transform: translate(-50%, -40%) rotate(-15deg); /* Adjust the rotation angle as needed */
-/* z-index: -1; /* Ensure the pseudo-element is behind the content */
-/*} */
   
 .hero-content {
 max-width: 80%;
@@ -142,7 +130,7 @@ font-weight: 300;
 
 .learn-more {
 display: inline-block;
-margin-top: 15rem;
+margin-top: 5rem;
 font-size: 1rem;
 color: #999;
 text-decoration: none;
@@ -150,7 +138,7 @@ position: relative;
 }
 
 .learn-more::after {
-content: '\f107'; /* Font Awesome down arrow */
+content: '\f107'; /* FontAwesome arrow */
 font-family: "FontAwesome";
 font-size: 1.5rem;
 display: block;
@@ -256,14 +244,14 @@ margin-top: 0.5rem;
 
 .reviews-section {
   padding: 20px;
-  background-color: #f0f0f0; /* Adjust as needed */
+  background-color: #f0f0f0;
 }
 
 .reviews-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px; /* Adjust spacing between items */
+  gap: 20px;
 }
 
 .review-item {
