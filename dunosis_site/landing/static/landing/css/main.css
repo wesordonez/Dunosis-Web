@@ -178,6 +178,22 @@ margin-top: 0.5rem;
     line-height: 1.5;
     color: #555;
   }
+
+  @media (max-width: 768px) {
+    .service-item {
+      flex-direction: column;
+    }
+    .service-item .number > h1 {
+      font-size: 60px;
+      margin-bottom: 0px;
+    }
+    .service-item h2 {
+      font-size: 1.5rem;
+    }
+    .service-item p {
+      font-size: 1rem;
+    }
+  }
   
   .service-item:nth-child(1) .number::before,
   .service-item:nth-child(2) .number::before,
@@ -198,6 +214,15 @@ margin-top: 0.5rem;
   
   .service-item:nth-child(3) .number::before {
     background: url('../img/ccchaos.svg') no-repeat center center;
+  }
+
+  @media (max-width: 768px) {
+    .service-item:nth-child(1) .number::before,
+    .service-item:nth-child(2) .number::before,
+    .service-item:nth-child(3) .number::before {
+      left: -70px;
+      top: -50px;
+    }
   }
 
 /* Reviews Section */
