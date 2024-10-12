@@ -62,3 +62,31 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileNavLinks.classList.toggle('visible');
     });
 });
+
+// Simple image switch for the card carousel
+const cards = document.querySelectorAll('.card');
+let currentCard = 0;
+
+function switchCards() {
+    cards.forEach((card, index) => {
+    card.style.opacity = '0'; // hide all cards
+    });
+    cards[currentCard].style.opacity = '1'; // show current card
+    currentCard = (currentCard + 1) % cards.length; // move to the next card
+}
+
+setInterval(switchCards, 3000); // switch every 3 seconds
+
+// Revolving banner
+const banner = document.querySelector('.banner-content');
+let bannerScroll = 0;
+
+function scrollBanner() {
+    bannerScroll -= 2; // scroll speed
+    banner.style.transform = `translateX(${bannerScroll}px)`;
+
+    if (Math.abs(bannerScroll) >= banner.offsetWidth / 2) {
+    bannerScroll = 0; // reset position
+    }
+}
+setInterval(scrollBanner, 50); // speed for revolving banner
