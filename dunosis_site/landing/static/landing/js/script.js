@@ -52,3 +52,66 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Header Mobile Menu
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const mobileNavLinks = document.querySelector('.mobile-nav-links');
+
+    hamburgerMenu.addEventListener('click', function() {
+        mobileNavLinks.classList.toggle('visible');
+    });
+});
+
+// Form Validation
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('.contact-form');
+    const name = document.querySelector('#name');
+    const email = document.querySelector('#email');
+    const message = document.querySelector('#message');
+    const submitButton = document.querySelector('.submit-button');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        if (name.value === '') {
+            name.classList.add('error');
+        } else {
+            name.classList.remove('error');
+        }
+
+        if (email.value === '') {
+            email.classList.add('error');
+        } else {
+            email.classList.remove('error');
+        }
+
+        if (message.value === '') {
+            message.classList.add('error');
+        } else {
+            message.classList.remove('error');
+        }
+
+        if (name.value !== '' && email.value !== '' && message.value !== '') {
+            form.submit();
+        }
+    });
+
+    name.addEventListener('input', function() {
+        if (name.value !== '') {
+            name.classList.remove('error');
+        }
+    });
+
+    email.addEventListener('input', function() {
+        if (email.value !== '') {
+            email.classList.remove('error');
+        }
+    });
+
+    message.addEventListener('input', function() {
+        if (message.value !== '') {
+            message.classList.remove('error');
+        }
+    });
+});

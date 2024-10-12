@@ -28,7 +28,6 @@
 
 </head>
 <body>
-    <!-- Navbar/Header TODO: work on styling and JS to hide it until scrolled down -->
     <header>
         <div class="header-logo">
             <img src="../../static/landing/img/logo.png" alt="Dunosis Logo" width="50" height="50">
@@ -36,6 +35,14 @@
         </div>
         <nav>
             <div class="nav-links">
+                <a href="{% url 'about' %}">About</a>
+                <a href="">Pricing</a>
+                <a href="">Portfolio</a>
+            </div>
+            <div class="hamburger-menu">
+              <i class="fas fa-bars"></i>
+            </div>
+            <div class="mobile-nav-links">
                 <a href="">About</a>
                 <a href="">Pricing</a>
                 <a href="">Portfolio</a>
@@ -43,51 +50,80 @@
         </nav>
     </header>
     <section class="hero-section">
-        <div class="hero-container">
-            <h1 class="hero-title">DUNOSIS</h1>
-            <p>Where Knowledge Meets Power</p>
-            <a href="#services-section" onclick="onLearnMoreClick" class="learn-more">Learn More</a>
+        <div class="hero-title">
+          <div class="title">Dunosis</div>
+          <div class="subtitle">Where Knowledge Meets Power</div>
+        </div>
+        
+        <div class="description">
+            We combine unreasonable hospitality and powerful solutions to drive your business forward
+        </div>
+        
+        <div class="service-links">
+          <a href="" class="service-button">
+            <div class="button-text">Building Custom Websites</div>
+          </a>
+          
+          <a href="#data-value" class="service-button">
+            <div class="button-text">Unlocking the Value of Your Data</div>
+          </a>
+          
+          <a href="#tech-consulting" class="service-button">
+            <div class="button-text">Providing Expert Tech Consulting</div>
+          </a>
+        </div>
+                
+        <div class="learn-more-container">
+          <a href="#services-section" onclick="onLearnMoreClick" class="learn-more">Learn More</a>
         </div>
     </section>
     <section class="services-section" id="services-section">
-        <div class="service-item">
-          <div class="number">
-            <h1>1.</h1>
-          </div>
-          <div class="content">
-            <h2>Advanced Data Analytics</h2>
-            <p>
-              Unlock the full potential of your data with our advanced analytics solutions. We dive deep into your data to uncover actionable insights, empowering you to make smarter, faster decisions. Whether it's predictive modeling, trend analysis, or real-time reporting, our cutting-edge analytics transform complexity into clarity, driving your business forward.
-            </p>
-          </div>
+      <h1 class="section-title">Services</h1>
+      <p class="tagline">Focus On Your Business, We’ll Handle The Tech.</p>
+  
+      <div class="services-container">
+        <!-- Service 1: Web Development -->
+        <div class="service-card">
+          <h2>Web Development</h2>
+          <ul>
+            <li>Beautiful and fully custom designs that make your business and brand stand out</li>
+            <li>Custom solutions for business needs such as e-commerce, CRM integration, and online orders</li>
+            <li>Integrated analytics, SEO keywords, and administration of your content</li>
+            <li>Advanced features like AI Chatbots for sales, customer support, and client pipelines</li>
+          </ul>
+          <button class="learn-more-btn">Learn More</button>
         </div>
-    
-        <div class="service-item">
-          <div class="number">
-            <h1>2.</h1>
-          </div>
-          <div class="content">
-            <h2>Stunning Web Development</h2>
-            <p>
-              Bring your vision to life with stunning web development that blends creativity and functionality. We craft responsive, user-centric websites designed to engage and convert. Whether it’s a sleek portfolio, a dynamic e-commerce platform, or a custom web app, our expert team builds with precision and innovation, ensuring your online presence stands out and performs flawlessly.
-            </p>
-          </div>
+  
+        <!-- Service 2: Data Analytics -->
+        <div class="service-card">
+          <h2>Data Analytics</h2>
+          <ul>
+            <li>Outstanding visualizations of complex data sets</li>
+            <li>Insights into your business, customers, marketing, or competitors data</li>
+            <li>Custom live dashboards for website analytics, business needs, and production</li>
+            <li>Expert advice and consulting for your data needs and solutions</li>
+          </ul>
+          <button class="learn-more-btn">Learn More</button>
         </div>
-    
-        <div class="service-item">
-          <div class="number">
-            <h1>3.</h1>
-          </div>
-          <div class="content">
-            <h2>Insightful Tech Consulting</h2>
-            <p>
-              Navigate the ever-evolving tech landscape with confidence. Our insightful tech consulting services provide you with tailored strategies and expert guidance to streamline operations and fuel growth. From optimizing your infrastructure to integrating cutting-edge solutions, we help you harness the right technology to drive results and future-proof your business.
-            </p>
-          </div>
+  
+        <!-- Service 3: Tech Consulting -->
+        <div class="service-card">
+          <h2>Tech Consulting</h2>
+          <ul>
+            <li>Web and software recommendations that advance your business needs</li>
+            <li>Set up and configurations of automations, AI solutions, and other software accounts</li>
+            <li>Powerful research to provide extensive options that best suit your needs</li>
+            <li>Outstanding service through years of experience in mechanical and software engineering and business development</li>
+          </ul>
+          <button class="learn-more-btn">Learn More</button>
         </div>
-      </section>
-      <section class="reviews-section">
-        <div class="reviews-container">
+      </div>
+    </section>
+    <section class="reviews-section">
+      <h1 class="section-title">Reviews</h1>
+      <p class="tagline">Real Results, Real Reviews — See What Our Clients Have to Say!</p>
+
+      <div class="reviews-container">
         <div class="review-item">
           <div class="review-content">
             <p>
@@ -115,17 +151,89 @@
           </div>
         </div>
       </div>
-      </section>
-      <footer>
-        <div class="footer-container">
-          <div class="footer-content">
-            <h1>Discover How To Take Your Business to The Next Level</h1>
-            <a href="mailto:info@dunosis.com?subject=Dunosis%20Inquiry&body=I%20would%20like%20to%20know%20more%20about%20your%20services.">
-                <button class="contact-btn">Contact Us</button>
-            </a>
+    </section>
+    <section class="contact-section">
+      <div class="contact-container">
+        <!-- Left Section: Heading and Social Media -->
+        <div class="contact-left">
+          <h1>Your Business Deserves More, Let’s Make It Happen!</h1>
+          <p>Get started quickly and easily with a FREE consultation!</p>
+          <div class="social-icons">
+            <div class="social-icon-container">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="social-icon-container">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <div class="social-icon-container">
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <div class="social-icon-container">
+              <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Right Section: Contact Form -->
+        <div class="contact-right">
+          <form class="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="John Smith" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="test@email.com" required>
+            
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1 (601) 308-0127" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="I want an awesome website for my business!" required></textarea>
+            
+            <button type="submit" class="submit-btn">Submit</button>
+          </form>
         </div>
       </div>
-        </footer>
+    </section>
+    <footer>
+          <!-- Left Section: Logo -->
+      <div class="footer-logo">
+        <img src="../../static/landing/img/logo.png" alt="Dunosis Logo" width="50" height="50">
+        <span>DUNOSIS</span>
+      </div>
+
+      <!-- Middle Section: Navigation Links -->
+      <nav class="nav-links">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Portfolio</a>
+      </nav>
+
+      <!-- Right Section: Social Icons and Contact -->
+       <div class="footer-social-icons">
+        <div class="social-icons">
+          <div class="social-icon-container">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+          <div class="social-icon-container">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+          <div class="social-icon-container">
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+          <div class="social-icon-container">
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+       </div>
+      <div class="footer-contact">
+        <div class="contact-info">
+          <p><i class="fa fa-map-marker"></i> Chicago, IL</p>
+          <p><i class="fa fa-phone"></i> +1 (601) 308-0127</p>
+          <p><i class="fa fa-envelope"></i> info@dunosis.com</p>
+          
+        </div>
+      </div>
+    </footer>
 
        <!-- Bootstrap JS CDN -->
        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
