@@ -77,16 +77,18 @@ function switchCards() {
 
 setInterval(switchCards, 3000); // switch every 3 seconds
 
+switchCards();
+
 // Revolving banner
 const banner = document.querySelector('.banner-content');
 let bannerScroll = 0;
 
 function scrollBanner() {
-    bannerScroll -= 2; // scroll speed
+    bannerScroll -= 0; // scroll speed
     banner.style.transform = `translateX(${bannerScroll}px)`;
 
     if (Math.abs(bannerScroll) >= banner.offsetWidth / 2) {
     bannerScroll = 0; // reset position
     }
 }
-setInterval(scrollBanner, 50); // speed for revolving banner
+setInterval(scrollBanner, 0); // speed for revolving banner
