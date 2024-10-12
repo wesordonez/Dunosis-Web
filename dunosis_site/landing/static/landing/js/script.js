@@ -52,3 +52,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Header Mobile Menu
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const mobileNavLinks = document.querySelector('.mobile-nav-links');
+
+    hamburgerMenu.addEventListener('click', function() {
+        mobileNavLinks.classList.toggle('visible');
+    });
+});
