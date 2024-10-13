@@ -5,3 +5,6 @@ def home(request):
 
 def about(request):
     return render(request, 'landing/about.html')
+
+def services(request):
+    return render(request, 'landing/services.html')
