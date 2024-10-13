@@ -63,55 +63,33 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Form Validation
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('.contact-form');
-    const name = document.querySelector('#name');
-    const email = document.querySelector('#email');
-    const message = document.querySelector('#message');
-    const submitButton = document.querySelector('.submit-button');
 
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
+// Simple image switch for the card carousel (not used/working yet)
+// const cards = document.querySelectorAll('.card');
+// let currentCard = 0;
 
-        if (name.value === '') {
-            name.classList.add('error');
-        } else {
-            name.classList.remove('error');
-        }
+// function switchCards() {
+//     cards.forEach((card, index) => {
+//     card.style.opacity = '0'; // hide all cards
+//     });
+//     cards[currentCard].style.opacity = '1'; // show current card
+//     currentCard = (currentCard + 1) % cards.length; // move to the next card
+// }
 
-        if (email.value === '') {
-            email.classList.add('error');
-        } else {
-            email.classList.remove('error');
-        }
+// setInterval(switchCards, 3000); // switch every 3 seconds
 
-        if (message.value === '') {
-            message.classList.add('error');
-        } else {
-            message.classList.remove('error');
-        }
+// switchCards();
 
-        if (name.value !== '' && email.value !== '' && message.value !== '') {
-            form.submit();
-        }
-    });
+// Revolving banner
+// const banner = document.querySelector('.banner-content');
+// let bannerScroll = 0;
 
-    name.addEventListener('input', function() {
-        if (name.value !== '') {
-            name.classList.remove('error');
-        }
-    });
+// function scrollBanner() {
+//     bannerScroll -= 20; // scroll speed
+//     banner.style.transform = `translateX(${bannerScroll}px)`;
 
-    email.addEventListener('input', function() {
-        if (email.value !== '') {
-            email.classList.remove('error');
-        }
-    });
-
-    message.addEventListener('input', function() {
-        if (message.value !== '') {
-            message.classList.remove('error');
-        }
-    });
-});
+//     if (Math.abs(bannerScroll) >= banner.offsetWidth / 2) {
+//     bannerScroll = 0; // reset position
+//     }
+// }
+// setInterval(scrollBanner, 50); // speed for revolving banner
