@@ -64,86 +64,32 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// Simple image switch for the card carousel
-const cards = document.querySelectorAll('.card');
-let currentCard = 0;
+// Simple image switch for the card carousel (not used/working yet)
+// const cards = document.querySelectorAll('.card');
+// let currentCard = 0;
 
-function switchCards() {
-    cards.forEach((card, index) => {
-    card.style.opacity = '0'; // hide all cards
-    });
-    cards[currentCard].style.opacity = '1'; // show current card
-    currentCard = (currentCard + 1) % cards.length; // move to the next card
-}
+// function switchCards() {
+//     cards.forEach((card, index) => {
+//     card.style.opacity = '0'; // hide all cards
+//     });
+//     cards[currentCard].style.opacity = '1'; // show current card
+//     currentCard = (currentCard + 1) % cards.length; // move to the next card
+// }
 
-setInterval(switchCards, 3000); // switch every 3 seconds
+// setInterval(switchCards, 3000); // switch every 3 seconds
 
-switchCards();
+// switchCards();
 
 // Revolving banner
-const banner = document.querySelector('.banner-content');
-let bannerScroll = 0;
+// const banner = document.querySelector('.banner-content');
+// let bannerScroll = 0;
 
-function scrollBanner() {
-    bannerScroll -= 0; // scroll speed
-    banner.style.transform = `translateX(${bannerScroll}px)`;
+// function scrollBanner() {
+//     bannerScroll -= 20; // scroll speed
+//     banner.style.transform = `translateX(${bannerScroll}px)`;
 
-    if (Math.abs(bannerScroll) >= banner.offsetWidth / 2) {
-    bannerScroll = 0; // reset position
-    }
-}
-setInterval(scrollBanner, 0); // speed for revolving banner
-=======
-// Form Validation
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('.contact-form');
-    const name = document.querySelector('#name');
-    const email = document.querySelector('#email');
-    const message = document.querySelector('#message');
-    const submitButton = document.querySelector('.submit-button');
-
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        if (name.value === '') {
-            name.classList.add('error');
-        } else {
-            name.classList.remove('error');
-        }
-
-        if (email.value === '') {
-            email.classList.add('error');
-        } else {
-            email.classList.remove('error');
-        }
-
-        if (message.value === '') {
-            message.classList.add('error');
-        } else {
-            message.classList.remove('error');
-        }
-
-        if (name.value !== '' && email.value !== '' && message.value !== '') {
-            form.submit();
-        }
-    });
-
-    name.addEventListener('input', function() {
-        if (name.value !== '') {
-            name.classList.remove('error');
-        }
-    });
-
-    email.addEventListener('input', function() {
-        if (email.value !== '') {
-            email.classList.remove('error');
-        }
-    });
-
-    message.addEventListener('input', function() {
-        if (message.value !== '') {
-            message.classList.remove('error');
-        }
-    });
-});
-
+//     if (Math.abs(bannerScroll) >= banner.offsetWidth / 2) {
+//     bannerScroll = 0; // reset position
+//     }
+// }
+// setInterval(scrollBanner, 50); // speed for revolving banner

@@ -234,7 +234,7 @@ header {
     font-size: 24px;
     font-weight: 900;
     white-space: nowrap;
-    animation: scrolling-text 10s linear infinite;
+    animation: scrolling-text 20s linear infinite;
   }
   
   .banner-content p {
