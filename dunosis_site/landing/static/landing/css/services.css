@@ -472,19 +472,21 @@ header {
 /* Process Timeline */
 
 .process-timeline {
-    max-width: 800px;
-    margin: 0 auto;
+    text-align: left;
+    margin-top: 80px;
   }
   
   .process-timeline h1 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-weight: 900;
+    margin: 40px;
   }
   
   .process-timeline .description {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 40px;
+    font-size: 1rem;
+    font-weight: 200;
+    width: 80%;
+    margin: 40px auto;
   }
   
   .timeline-container {
@@ -492,6 +494,8 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 90%;
+    margin: 0 auto;
   }
   
   .stage {
@@ -499,6 +503,16 @@ header {
     width: 100%;
     justify-content: flex-start;
     margin: 20px 0;
+  }
+
+  .stage-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+    border-bottom: 4px solid black;
+    padding: 20px;
+    margin-bottom: 20px;
   }
   
   .stage.left {
@@ -517,7 +531,7 @@ header {
   
   .stage p {
     font-size: 1rem;
-    color: #555;
+    font-weight: 200;
   }
   
   .stage.left h2, .stage.left p {
@@ -530,27 +544,30 @@ header {
     left: 50%;
     top: 0;
     height: 100%;
-    width: 4px;
+    width: 8px;
     background-color: black;
     transform: translateX(-50%);
+  }
+
+  .arrow-end {
+    justify-content: center;
+    text-align: center;
+    margin: auto;
   }
   
   .final-delivery {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 20px;
   }
   
   .final-delivery p {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 900;
     margin-bottom: 20px;
   }
   
-  .final-delivery .arrow {
-    font-size: 2rem;
-  }
 
   /* Footer */
 
