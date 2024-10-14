@@ -443,6 +443,32 @@ header {
     transition: background-color 0.3s ease, color 0.3s ease;
     }
 
+    /* Tech Consulting Section */
+
+    .tech-consulting-section {
+        text-align: left;
+        margin-top: 80px;
+    }
+
+    .tech-consulting-section h1 {
+        font-size: 2rem;
+        font-weight: 900;
+        margin: 40px;
+    }
+
+    .tech-consulting-section p {
+        font-size: 1rem;
+        font-weight: 300;
+        margin: 20px auto;
+        width: 80%;
+    }
+
+    .call-to-action p {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        }
+
   /* Footer */
 
 footer {
