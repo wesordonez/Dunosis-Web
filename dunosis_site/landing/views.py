@@ -8,3 +8,6 @@ def about(request):
 
 def services(request):
     return render(request, 'landing/services.html')
+
+def portfolio(request):
+    return render(request, 'landing/portfolio.html')
