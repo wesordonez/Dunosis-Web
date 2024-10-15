@@ -3,11 +3,18 @@
 function onLearnMoreClick(event) {
     document.addEventListener('DOMContentLoaded', function() {
         const learnMoreLink = document.querySelector('.learn-more');
+        const ctaLinks = document.querySelectorAll('.cta');
         const nextSection = document.querySelector('#services-section');
+        const contactSection = document.querySelector('#contact-section');
 
         learnMoreLink.addEventListener('click', function(event) {
             event.preventDefault();
             nextSection.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        ctaLinks.addEventListener('click', function(event) {
+            event.preventDefault();
+            contactSection.scrollIntoView({ behavior: 'smooth' });
         });
     });
 }

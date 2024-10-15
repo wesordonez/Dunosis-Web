@@ -23,7 +23,7 @@
     <script src="https://kit.fontawesome.com/9451864d27.js" crossorigin="anonymous"></script>
 
     <!-- Title -->
-    <title>Dunosis</title>
+    <title>Dunosis Services</title>
     <link rel="icon" href="../../static/landing/img/favicon.ico" type="image/x-icon">
 
 </head>
@@ -36,16 +36,16 @@
         <nav>
             <div class="nav-links">
                 <a href="{% url 'home' %}">Home</a>
-                <a href="{% url 'services' %}">Services</a>
-                <a href="">Portfolio</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'portfolio' %}">Portfolio</a>
             </div>
             <div class="hamburger-menu">
               <i class="fas fa-bars"></i>
             </div>
             <div class="mobile-nav-links">
                 <a href="{% url 'home' %}">Home</a>
-                <a href="{% url 'services' %}">Services</a>
-                <a href="">Portfolio</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'portfolio' %}">Portfolio</a>
             </div>
         </nav>
     </header>
@@ -96,7 +96,9 @@
               <li>Basic Web Hosting and Cloud Service</li>
               <li>Limited Design Revisions</li>
             </ul>
-            <button class="learn-more-btn">Learn More</button>
+            <a href="{% url 'home' %}">
+                <button class="learn-more-btn">Get Started Now!</button>
+            </a>
           </div>
     
           <!-- Card 2 -->
@@ -110,7 +112,9 @@
               <li>Advanced Hosting and Cloud Services</li>
               <li>Additional Design Revisions</li>
             </ul>
-            <button class="learn-more-btn">Learn More</button>
+            <a href="{% url 'home' %}">
+                <button class="learn-more-btn">Get Started Now!</button>
+            </a>
           </div>
     
           <!-- Card 3 -->
@@ -124,7 +128,9 @@
               <li>Priority Support and Maintanence</li>
               <li>Customized Analytics Dashboards</li>
             </ul>
-            <button class="learn-more-btn">Learn More</button>
+            <a href="{% url 'home' %}">
+                <button class="learn-more-btn">Get Started Now!</button>
+            </a>
           </div>
         </div>
     
@@ -177,8 +183,10 @@
     
         <!-- Call to Action -->
         <div class="call-to-action">
-          <p>Contact us now to learn how we can help with your data needs!</p>
-          <button class="learn-more-btn">Learn More</button>
+            <p>Contact us now to learn how we can help with your data needs!</p>
+            <a href="{% url 'home' %}">
+              <button class="learn-more-btn">Learn More</button>
+            </a>
         </div>
     </section>
 
@@ -190,7 +198,9 @@
         <!-- Call to Action -->
         <div class="call-to-action">
             <p>Contact us for your first consultation free!</p>
-            <button class="learn-more-btn">Learn More</button>
+            <a href="{% url 'home' %}">
+                <button class="learn-more-btn">Learn More</button>
+            </a>
         </div>
     </section>
 
@@ -278,25 +288,25 @@
 
         <!-- Middle Section: Navigation Links -->
         <nav class="nav-links">
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Portfolio</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'services' %}">Services</a>
+            <a href="{% url 'portfolio' %}">Portfolio</a>
         </nav>
 
         <!-- Right Section: Social Icons and Contact -->
         <div class="footer-social-icons">
             <div class="social-icons">
                 <div class="social-icon-container">
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/dunosis_web/"><i class="fa-brands fa-instagram"></i></a>
                 </div>
                 <div class="social-icon-container">
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61565984502377"><i class="fa-brands fa-facebook"></i></a>
                 </div>
                 <div class="social-icon-container">
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/company/dunosis/about/"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
                 <div class="social-icon-container">
-                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://wa.me/6013080127?text=Hi! I'm interested in..."><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
