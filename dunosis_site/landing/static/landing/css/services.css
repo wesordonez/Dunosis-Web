@@ -215,6 +215,9 @@ header {
             flex-direction: column;
             gap: 40px;
         }
+        .service-card {
+            width: 100%;
+        }
     }
 
     /* Web Dev Services Section */
@@ -570,7 +573,6 @@ header {
     font-weight: 900;
     margin-bottom: 20px;
   }
-  
 
   /* Footer */
 
