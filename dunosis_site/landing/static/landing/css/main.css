@@ -241,15 +241,19 @@ margin-top: 0.5rem;
 
 @media (max-width: 768px) {
   .title {
-    font-size: 80px;
+    font-size: 60px;
+    margin-top: 0;
   }
   .hero-title {
     font-size: 80px;
-    margin-top: 100px;
+    margin-top: 0;
     margin-bottom: 180px;
   }
   .service-links {
-    width: 80%;
+    display: none;
+  }
+  .learn-more {
+    margin-top: 0;
   }
 }
   
@@ -338,6 +342,12 @@ margin-top: 0.5rem;
 .learn-more-btn:hover {
   background-color: black;
   color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .services-section {
+    padding: 50px 20px;
+  }
 }
 
 /* Reviews Section */
