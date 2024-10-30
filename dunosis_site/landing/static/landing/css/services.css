@@ -159,7 +159,7 @@ header {
   .services-hero-content {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 50px;
     width: 90%;
     margin: 20px auto;
@@ -220,7 +220,7 @@ header {
     /* Web Dev Services Section */
 
     .web-dev-section {
-        text-align: left;
+        text-align: center;
         margin-top: 80px;
     }
 
@@ -346,7 +346,7 @@ header {
     /* Data Analytics Section */
 
     .data-analytics-section {
-    text-align: left;
+    text-align: center;
     margin-top: 80px;
     }
 
@@ -447,7 +447,7 @@ header {
     /* Tech Consulting Section */
 
     .tech-consulting-section {
-        text-align: left;
+        text-align: center;
         margin-top: 80px;
     }
 
@@ -473,7 +473,7 @@ header {
 /* Process Timeline */
 
 .process-timeline {
-    text-align: left;
+    text-align: center;
     margin-top: 80px;
   }
   
