@@ -1,326 +1,485 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dunosis is a technology company that specializes in advanced data analytics, stunning web development, and insightful tech consulting.">
-    <meta name="keywords" content="Dunosis, data analytics, web development, tech consulting, technology, business, analytics, web design, consulting">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Dunosis is a technology company that specializes in advanced data analytics, stunning web development, and insightful tech consulting."
+    />
+    <meta
+      name="keywords"
+      content="Dunosis, data analytics, web development, tech consulting, technology, business, analytics, web design, consulting"
+    />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
     <!-- Project CSS Link -->
-    <link rel="stylesheet" href="{% static 'landing/css/services.css' %}">
+    <link rel="stylesheet" href="{% static 'landing/css/services.css' %}" />
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/9451864d27.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/9451864d27.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Title -->
     <title>Dunosis Services</title>
-    <link rel="icon" href="../../static/landing/img/favicon.ico" type="image/x-icon">
-
-</head>
-<body>
+    <link
+      rel="icon"
+      href="../../static/landing/img/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
     <header>
-        <div class="header-logo">
-            <img src="../../static/landing/img/logo.png" alt="Dunosis Logo" width="50" height="50">
-            <p class="logo-text">DUNOSIS</p>
+      <div class="header-logo">
+        <img
+          src="../../static/landing/img/logo.png"
+          alt="Dunosis Logo"
+          width="50"
+          height="50"
+        />
+        <p class="logo-text">DUNOSIS</p>
+      </div>
+      <nav>
+        <div class="nav-links">
+          <a href="{% url 'home' %}">Home</a>
+          <a href="{% url 'about' %}">About</a>
+          <a href="{% url 'portfolio' %}">Portfolio</a>
         </div>
-        <nav>
-            <div class="nav-links">
-                <a href="{% url 'home' %}">Home</a>
-                <a href="{% url 'about' %}">About</a>
-                <a href="{% url 'portfolio' %}">Portfolio</a>
-            </div>
-            <div class="hamburger-menu">
-              <i class="fas fa-bars"></i>
-            </div>
-            <div class="mobile-nav-links">
-                <a href="{% url 'home' %}">Home</a>
-                <a href="{% url 'about' %}">About</a>
-                <a href="{% url 'portfolio' %}">Portfolio</a>
-            </div>
-        </nav>
+        <div class="hamburger-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="mobile-nav-links">
+          <a href="{% url 'home' %}">Home</a>
+          <a href="{% url 'about' %}">About</a>
+          <a href="{% url 'portfolio' %}">Portfolio</a>
+        </div>
+      </nav>
     </header>
 
     <section class="services-hero">
-        <h1>Learn More About How We Can Serve Your Business</h1>
+      <h1>Learn More About How We Can Serve Your Business</h1>
 
-        <div class="services-hero-content">
-            <div class="service-grid">
-                <div class="service-card">Web Dev</div>
-                <div class="service-card">Data Insights</div>
-                <div class="service-card">Tech Consulting</div>
-                <div class="service-card">Our Process</div>
-            </div>
-        
-            <div class="service-info">
-            <h2>Whatever service you need, you can count on:</h2>
-            <ul>
-                <li>Excellent service</li>
-                <li>Strong work ethic</li>
-                <li>Curious and open-minded solutions</li>
-                <li>Beautiful designs and visual aesthetic</li>
-            </ul>
-            </div>
+      <div class="services-hero-content">
+        <div class="service-grid">
+          <div class="service-card">Web Dev</div>
+          <div class="service-card">Data Insights</div>
+          <div class="service-card">Tech Consulting</div>
+          <div class="service-card">Our Process</div>
         </div>
+
+        <div class="service-info">
+          <h2>Whatever service you need, you can count on:</h2>
+          <ul>
+            <li>Excellent service</li>
+            <li>Strong work ethic</li>
+            <li>Curious and open-minded solutions</li>
+            <li>Beautiful designs and visual aesthetic</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section class="web-dev-section">
-        <h1>Web Development</h1>
-        <h2>Universal features included in all tiers:</h2>
-        <ul class="universal-tier">
-            <li>Free domain included</li>
-            <li>Email forwarding setup</li>
-            <li>1 year of service and maintanence</li>
-            <li>SEO optimization</li>
-            <li>Mobile responsive design</li>
-        </ul>
-    
-        <!-- Service Cards Container -->
-        <div class="cards-container">
-          <!-- Card 1 -->
-          <div class="pricing-card">
-            <h3>Basic</h3>
-            <p class="price">$650</p>
-            <ul class="features-list">
-              <li>Static Website (3 pages max)</li>
-              <li>Basic SEO and Analytics</li>
-              <li>Basic Web Hosting and Cloud Service</li>
-              <li>Limited Design Revisions</li>
-            </ul>
-            <a href="{% url 'home' %}">
-                <button class="learn-more-btn">Get Started Now!</button>
-            </a>
-          </div>
-    
-          <!-- Card 2 -->
-          <div class="pricing-card">
-            <h3>Advanced</h3>
-            <p class="price">$850</p>
-            <ul class="features-list">
-              <li>Dyanmic Website with Database</li>
-              <li>E-commerce, Scheduling, and other functionalties</li>
-              <li>Advanced SEO and Analytics</li>
-              <li>Advanced Hosting and Cloud Services</li>
-              <li>Additional Design Revisions</li>
-            </ul>
-            <a href="{% url 'home' %}">
-                <button class="learn-more-btn">Get Started Now!</button>
-            </a>
-          </div>
-    
-          <!-- Card 3 -->
-          <div class="pricing-card">
-            <h3>Premium</h3>
-            <p class="price">$1000</p>
-            <ul class="features-list">
-              <li>Everything included in Advanced Tier Plus...</li>
-              <li>Advanced and Custom Features</li>
-              <li>Unlimited Design Revisions</li>
-              <li>Priority Support and Maintanence</li>
-              <li>Customized Analytics Dashboards</li>
-            </ul>
-            <a href="{% url 'home' %}">
-                <button class="learn-more-btn">Get Started Now!</button>
-            </a>
-          </div>
+      <h1>Web Development</h1>
+      <h2>Universal features included in all tiers:</h2>
+      <ul class="universal-tier">
+        <li>Free domain included</li>
+        <li>Email forwarding setup</li>
+        <li>1 year of service and maintanence</li>
+        <li>SEO optimization</li>
+        <li>Mobile responsive design</li>
+      </ul>
+
+      <!-- Service Cards Container -->
+      <div class="cards-container">
+        <!-- Card 1 -->
+        <div class="pricing-card">
+          <h3>Basic</h3>
+          <p class="price">$650</p>
+          <ul class="features-list">
+            <li>Static Website (3 pages max)</li>
+            <li>Basic SEO and Analytics</li>
+            <li>Basic Web Hosting and Cloud Service</li>
+            <li>Limited Design Revisions</li>
+          </ul>
+          <a href="{% url 'home' %}">
+            <button class="learn-more-btn">Get Started Now!</button>
+          </a>
         </div>
-    
-          <p>Already have a website and looking to make improvements? We are still be able to help. Reach out for more info!</p>
+
+        <!-- Card 2 -->
+        <div class="pricing-card">
+          <h3>Advanced</h3>
+          <p class="price">$850</p>
+          <ul class="features-list">
+            <li>Dyanmic Website with Database</li>
+            <li>E-commerce, Scheduling, and other functionalties</li>
+            <li>Advanced SEO and Analytics</li>
+            <li>Advanced Hosting and Cloud Services</li>
+            <li>Additional Design Revisions</li>
+          </ul>
+          <a href="{% url 'home' %}">
+            <button class="learn-more-btn">Get Started Now!</button>
+          </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="pricing-card">
+          <h3>Premium</h3>
+          <p class="price">$1000</p>
+          <ul class="features-list">
+            <li>Everything included in Advanced Tier Plus...</li>
+            <li>Advanced and Custom Features</li>
+            <li>Unlimited Design Revisions</li>
+            <li>Priority Support and Maintanence</li>
+            <li>Customized Analytics Dashboards</li>
+          </ul>
+          <a href="{% url 'home' %}">
+            <button class="learn-more-btn">Get Started Now!</button>
+          </a>
+        </div>
+      </div>
+
+      <p>
+        Already have a website and looking to make improvements? We are still be
+        able to help. Reach out for more info!
+      </p>
     </section>
 
     <section class="data-analytics-section">
-        <h1>Data Science and Analytics</h1>
-    
-        <div class="project-list">
-          <!-- Project 1 -->
-          <div class="project">
-            <div class="project-info">
-              <h2>Data Infrastructure and Dashboard Development for Stakeholder Insights </h2>
-              <p>We partnered with Swoovy, a startup connecting people to volunteering opportunities in non-profits, to overhaul their data infrastructure. Working closely with their team, we revamped their data systems and developed intuitive dashboards to provide stakeholders with clear insights into funding and financial data. This project empowered Swoovy’s leadership and corporate partners to make informed decisions, driving growth and improving impact.</p>
-            </div>
-            <div class="project-image">
-                <a href="https://swoovy.com/">
-                    <img src="../../static/landing/img/swoovy-logo.webp" alt="Swoovy Logo" width="300" height="300">
-                </a>
-            </div>
+      <h1>Data Science and Analytics</h1>
+
+      <div class="project-list">
+        <!-- Project 1 -->
+        <div class="project">
+          <div class="project-info">
+            <h2>
+              Data Infrastructure and Dashboard Development for Stakeholder
+              Insights
+            </h2>
+            <p>
+              We partnered with Swoovy, a startup connecting people to
+              volunteering opportunities in non-profits, to overhaul their data
+              infrastructure. Working closely with their team, we revamped their
+              data systems and developed intuitive dashboards to provide
+              stakeholders with clear insights into funding and financial data.
+              This project empowered Swoovy’s leadership and corporate partners
+              to make informed decisions, driving growth and improving impact.
+            </p>
           </div>
-    
-          <!-- Project 2 -->
-          <div class="project">
-            <div class="project-info">
-              <h2>Bolivia's Migration Trends: Insights into Bolivia's Urban Growth</h2>
-              <p>This Google Data Analytics Capstone Project explores migration and displacement patterns within Bolivia, focusing on the rapid growth of Santa Cruz. Using data from the 2021 Survey for Homes of Bolivia, I analyzed migration trends, socioeconomic indicators, and labor statistics to provide valuable insights for urban planners, policymakers, and business leaders. The project serves as a tool to guide sustainable growth and informed decision-making in Santa Cruz and beyond.</p>
-            </div>
-            <div class="project-image">
-                <a href="https://wesordonez.github.io/Data_Analysis_Bolivian_Migration/">
-                    <img src="../../static/landing/img/migration-project.png" alt="Bolivia Map" width="300" height="300">
-                </a>
-            </div>
-          </div>
-    
-          <!-- Project 3 -->
-          <div class="project">
-            <div class="project-info">
-              <h2>CommuniData-Humboldt Park: Empowering Communities Through Data</h2>
-              <p>CommuniData is an innovative data visualization dashboard designed for community organizations in Chicago. It provides a user-friendly platform for analyzing critical data related to community development. From tracking crime rates to monitoring demographic trends and community resources, CommuniData equips organizations with the tools to visualize, explore, and gain valuable insights. With this powerful tool, community leaders can make informed decisions and communicate their findings effectively, driving positive change and fostering growth within their communities.</p>
-            </div>
-            <div class="project-image">
-                <a href="https://www.communidata.app">
-                    <img src="../../static/landing/img/communidata-project.png" alt="Humboldt Park" width="300" height="300">
-                </a>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Call to Action -->
-        <div class="call-to-action">
-            <p>Contact us now to learn how we can help with your data needs!</p>
-            <a href="{% url 'home' %}">
-              <button class="learn-more-btn">Learn More</button>
+          <div class="project-image">
+            <a href="https://swoovy.com/">
+              <img
+                src="../../static/landing/img/swoovy-logo.webp"
+                alt="Swoovy Logo"
+                width="300"
+                height="300"
+              />
             </a>
+          </div>
         </div>
+
+        <!-- Project 2 -->
+        <div class="project">
+          <div class="project-info">
+            <h2>
+              Bolivia's Migration Trends: Insights into Bolivia's Urban Growth
+            </h2>
+            <p>
+              This Google Data Analytics Capstone Project explores migration and
+              displacement patterns within Bolivia, focusing on the rapid growth
+              of Santa Cruz. Using data from the 2021 Survey for Homes of
+              Bolivia, I analyzed migration trends, socioeconomic indicators,
+              and labor statistics to provide valuable insights for urban
+              planners, policymakers, and business leaders. The project serves
+              as a tool to guide sustainable growth and informed decision-making
+              in Santa Cruz and beyond.
+            </p>
+          </div>
+          <div class="project-image">
+            <a
+              href="https://wesordonez.github.io/Data_Analysis_Bolivian_Migration/"
+            >
+              <img
+                src="../../static/landing/img/migration-project.png"
+                alt="Bolivia Map"
+                width="300"
+                height="300"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project">
+          <div class="project-info">
+            <h2>
+              CommuniData-Humboldt Park: Empowering Communities Through Data
+            </h2>
+            <p>
+              CommuniData is an innovative data visualization dashboard designed
+              for community organizations in Chicago. It provides a
+              user-friendly platform for analyzing critical data related to
+              community development. From tracking crime rates to monitoring
+              demographic trends and community resources, CommuniData equips
+              organizations with the tools to visualize, explore, and gain
+              valuable insights. With this powerful tool, community leaders can
+              make informed decisions and communicate their findings
+              effectively, driving positive change and fostering growth within
+              their communities.
+            </p>
+          </div>
+          <div class="project-image">
+            <a href="https://www.communidata.app">
+              <img
+                src="../../static/landing/img/communidata-project.png"
+                alt="Humboldt Park"
+                width="300"
+                height="300"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="call-to-action">
+        <p>Contact us now to learn how we can help with your data needs!</p>
+        <a href="{% url 'home' %}">
+          <button class="learn-more-btn">Learn More</button>
+        </a>
+      </div>
     </section>
 
     <section class="tech-consulting-section">
-        <h1>Tech Consulting</h1>
-        <p>With over 10 years of experience across diverse fields, we bring a wealth of knowledge to help your business thrive. From photography to mechanical engineering, robotics design in the automotive industry, business consulting, software development, and data science, we’ve tackled countless projects. Our expertise spans a wide range of industries, enabling us to offer tailored solutions that meet your unique challenges.</p>
-        <p>Our tech consulting services cover everything from implementing CRMs for businesses and integrating AI solutions, to optimizing social media account linking and even the design and fabrication of mechanical and electromechanical systems. Whether you’re looking to enhance your business processes, build cutting-edge systems, or explore innovative technologies, we’re here to provide the guidance you need to take your business to the next level.</p>
+      <h1>Tech Consulting</h1>
+      <p>
+        With over 10 years of experience across diverse fields, we bring a
+        wealth of knowledge to help your business thrive. From photography to
+        mechanical engineering, robotics design in the automotive industry,
+        business consulting, software development, and data science, we’ve
+        tackled countless projects. Our expertise spans a wide range of
+        industries, enabling us to offer tailored solutions that meet your
+        unique challenges.
+      </p>
+      <p>
+        Our tech consulting services cover everything from implementing CRMs for
+        businesses and integrating AI solutions, to optimizing social media
+        account linking and even the design and fabrication of mechanical and
+        electromechanical systems. Whether you’re looking to enhance your
+        business processes, build cutting-edge systems, or explore innovative
+        technologies, we’re here to provide the guidance you need to take your
+        business to the next level.
+      </p>
 
-        <!-- Call to Action -->
-        <div class="call-to-action">
-            <p>Contact us for your first consultation free!</p>
-            <a href="{% url 'home' %}">
-                <button class="learn-more-btn">Learn More</button>
-            </a>
-        </div>
+      <!-- Call to Action -->
+      <div class="call-to-action">
+        <p>Contact us for your first consultation free!</p>
+        <a href="{% url 'home' %}">
+          <button class="learn-more-btn">Learn More</button>
+        </a>
+      </div>
     </section>
 
     <section class="process-timeline">
-        <h1>Process</h1>
-        <p class="description">Our streamlined process typically takes 2-5 weeks, guiding you from initial consultation to final launch. We begin with understanding your unique needs, followed by design, development, and testing phases. Throughout, we remain flexible and responsive, ensuring your project is under constant revision and improvement for the best results.</p>
-    
-        <div class="timeline-container">
-          <!-- Left Stages -->
-          <div class="stage left">
-            <div class="stage-content">
-                <h2>1. Initial Consult</h2>
-                <p>We start by getting to know your business, goals, and vision. This consultation helps us understand your needs and ensures we're aligned on the project direction from day one.</p>
-            </div>
+      <h1>Process</h1>
+      <p class="description">
+        Our streamlined process typically takes 2-5 weeks, guiding you from
+        initial consultation to final launch. We begin with understanding your
+        unique needs, followed by design, development, and testing phases.
+        Throughout, we remain flexible and responsive, ensuring your project is
+        under constant revision and improvement for the best results.
+      </p>
+
+      <div class="timeline-container">
+        <!-- Left Stages -->
+        <div class="stage left">
+          <div class="stage-content">
+            <h2>1. Initial Consult</h2>
+            <p>
+              We start by getting to know your business, goals, and vision. This
+              consultation helps us understand your needs and ensures we're
+              aligned on the project direction from day one.
+            </p>
           </div>
-    
+        </div>
+
         <div class="stage right">
-            <div class="stage-content">
-                <h2>2. Design Review</h2>
-                <p>Next, we present initial design concepts based on our consult, ensuring the visual and functional aspects of your website are tailored to your brand and objectives.</p>
-            </div>
+          <div class="stage-content">
+            <h2>2. Design Review</h2>
+            <p>
+              Next, we present initial design concepts based on our consult,
+              ensuring the visual and functional aspects of your website are
+              tailored to your brand and objectives.
+            </p>
+          </div>
         </div>
 
         <div class="stage left">
-            <div class="stage-content">
-                <h2>3. Design Approval</h2>
-                <p>Once you’re happy with the design, we move forward with your approval. This ensures everything is locked in before development begins, reducing any back-and-forth later.</p>
-            </div>
+          <div class="stage-content">
+            <h2>3. Design Approval</h2>
+            <p>
+              Once you’re happy with the design, we move forward with your
+              approval. This ensures everything is locked in before development
+              begins, reducing any back-and-forth later.
+            </p>
+          </div>
         </div>
 
         <div class="stage right">
-            <div class="stage-content">
-                <h2>4. Landing Page</h2>
-                <p>We start by developing your custom landing page, providing you with an initial working version of your website to establish the look and feel, and gather early feedback.</p>
-            </div>
+          <div class="stage-content">
+            <h2>4. Landing Page</h2>
+            <p>
+              We start by developing your custom landing page, providing you
+              with an initial working version of your website to establish the
+              look and feel, and gather early feedback.
+            </p>
+          </div>
         </div>
 
         <div class="stage left">
-            <div class="stage-content">
-                <h2>5. Continuous Improvement</h2>
-                <p>We fine-tune your website based on your feedback, making improvements and adjustments to ensure it’s exactly how you envisioned it.</p>
-            </div>
+          <div class="stage-content">
+            <h2>5. Continuous Improvement</h2>
+            <p>
+              We fine-tune your website based on your feedback, making
+              improvements and adjustments to ensure it’s exactly how you
+              envisioned it.
+            </p>
+          </div>
         </div>
 
         <div class="stage right">
-            <div class="stage-content">
-                <h2>6. SEO And Analytics</h2>
-                <p>We integrate SEO best practices and set up analytics tools, ensuring your site is optimized for search engines and ready to track user interactions and performance.</p>
-            </div>
+          <div class="stage-content">
+            <h2>6. SEO And Analytics</h2>
+            <p>
+              We integrate SEO best practices and set up analytics tools,
+              ensuring your site is optimized for search engines and ready to
+              track user interactions and performance.
+            </p>
+          </div>
         </div>
 
         <div class="stage left">
-            <div class="stage-content">
-                <h2>7. Testing And Refinement</h2>
-                <p>In this stage, we test the functionality, performance, and responsiveness of your website across different devices and browsers, refining any issues along the way.</p>
-            </div>
+          <div class="stage-content">
+            <h2>7. Testing And Refinement</h2>
+            <p>
+              In this stage, we test the functionality, performance, and
+              responsiveness of your website across different devices and
+              browsers, refining any issues along the way.
+            </p>
+          </div>
         </div>
 
         <div class="stage right">
-            <div class="stage-content">
-                <h2>8. Training And Handoff</h2>
-                <p>Finally, we provide training on how to manage and update your new website. Once you're comfortable, we hand over the reins, but we’re always available for future support!</p>
-            </div>
+          <div class="stage-content">
+            <h2>8. Training And Handoff</h2>
+            <p>
+              Finally, we provide training on how to manage and update your new
+              website. Once you're comfortable, we hand over the reins, but
+              we’re always available for future support!
+            </p>
+          </div>
         </div>
-        </div>
-        <div class="arrow-end">
-            <svg width="32" height="32" viewBox="0 10 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 21L3 9H21L12 21Z" fill="black"/>
-            </svg>
-        </div>
+      </div>
+      <div class="arrow-end">
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 10 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M12 21L3 9H21L12 21Z" fill="black" />
+        </svg>
+      </div>
 
-         <!-- Final Delivery -->
-         <div class="final-delivery">
-            <p>Final Delivery!</p>
-        </div>
-      </section>
-       
+      <!-- Final Delivery -->
+      <div class="final-delivery">
+        <p>Final Delivery!</p>
+      </div>
+    </section>
 
     <footer>
-        <!-- Left Section: Logo -->
-        <div class="footer-logo">
-            <img src="../../static/landing/img/logo.png" alt="Dunosis Logo" width="50" height="50">
-            <span>DUNOSIS</span>
-        </div>
+      <!-- Left Section: Logo -->
+      <div class="footer-logo">
+        <img
+          src="../../static/landing/img/logo.png"
+          alt="Dunosis Logo"
+          width="50"
+          height="50"
+        />
+        <span>DUNOSIS</span>
+      </div>
 
-        <!-- Middle Section: Navigation Links -->
-        <nav class="nav-links">
-            <a href="{% url 'about' %}">About</a>
-            <a href="{% url 'services' %}">Services</a>
-            <a href="{% url 'portfolio' %}">Portfolio</a>
-        </nav>
+      <!-- Middle Section: Navigation Links -->
+      <nav class="nav-links">
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'services' %}">Services</a>
+        <a href="{% url 'portfolio' %}">Portfolio</a>
+      </nav>
 
-        <!-- Right Section: Social Icons and Contact -->
-        <div class="footer-social-icons">
-            <div class="social-icons">
-                <div class="social-icon-container">
-                    <a href="https://www.instagram.com/dunosis_web/"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-                <div class="social-icon-container">
-                    <a href="https://www.facebook.com/profile.php?id=61565984502377"><i class="fa-brands fa-facebook"></i></a>
-                </div>
-                <div class="social-icon-container">
-                    <a href="https://www.linkedin.com/company/dunosis/about/"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-                <div class="social-icon-container">
-                    <a href="https://wa.me/6013080127?text=Hi! I'm interested in..."><i class="fa-brands fa-whatsapp"></i></a>
-                </div>
-            </div>
+      <!-- Right Section: Social Icons and Contact -->
+      <div class="footer-social-icons">
+        <div class="social-icons">
+          <div class="social-icon-container">
+            <a href="https://www.instagram.com/dunosis_web/"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+          <div class="social-icon-container">
+            <a href="https://www.facebook.com/profile.php?id=61565984502377"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </div>
+          <div class="social-icon-container">
+            <a href="https://www.linkedin.com/company/dunosis/about/"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </div>
+          <div class="social-icon-container">
+            <a href="https://wa.me/6013080127?text=Hi! I'm interested in..."
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+          </div>
         </div>
-        <div class="footer-contact">
-            <div class="contact-info">
-                <p><i class="fa fa-map-marker"></i> Chicago, IL</p>
-                <p><i class="fa fa-phone"></i> +1 (601) 308-0127</p>
-                <p><i class="fa fa-envelope"></i> info@dunosis.com</p>
-            </div>
+      </div>
+      <div class="footer-contact">
+        <div class="contact-info">
+          <p><i class="fa fa-map-marker"></i> Chicago, IL</p>
+          <p><i class="fa fa-phone"></i> +1 (601) 308-0127</p>
+          <p><i class="fa fa-envelope"></i> info@dunosis.com</p>
         </div>
+      </div>
     </footer>
 
     <!-- Bootstrap JS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="{% static 'landing/js/script.js' %}"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'landing/js/script.js' %}"
+    ></script>
+  </body>
 </html>
