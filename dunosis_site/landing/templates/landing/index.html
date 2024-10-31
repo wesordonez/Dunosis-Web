@@ -1,125 +1,187 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dunosis is a technology company that specializes in advanced data analytics, stunning web development, and insightful tech consulting.">
-    <meta name="keywords" content="Dunosis, data analytics, web development, tech consulting, technology, business, analytics, web design, consulting">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Dunosis is a technology company that specializes in advanced data analytics, stunning web development, and insightful tech consulting."
+    />
+    <meta
+      name="keywords"
+      content="Dunosis, data analytics, web development, tech consulting, technology, business, analytics, web design, consulting"
+    />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
     <!-- Project CSS Link -->
-    <link rel="stylesheet" href="{% static 'landing/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'landing/css/main.css' %}" />
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/9451864d27.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/9451864d27.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Title -->
     <title>Dunosis</title>
-    <link rel="icon" href="../../static/landing/img/favicon.ico" type="image/x-icon">
-
-</head>
-<body>
+    <link
+      rel="icon"
+      href="../../static/landing/img/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
     <header>
-        <div class="header-logo">
-            <img src="../../static/landing/img/logo.png" alt="Dunosis Logo" width="50" height="50">
-            <p class="logo-text">DUNOSIS</p>
+      <div class="header-logo">
+        <img
+          src="../../static/landing/img/logo.png"
+          alt="Dunosis Logo"
+          width="50"
+          height="50"
+        />
+        <p class="logo-text">DUNOSIS</p>
+      </div>
+      <nav>
+        <div class="nav-links">
+          <a href="{% url 'about' %}">About</a>
+          <a href="{% url 'services' %}">Services</a>
+          <a href="{% url 'portfolio' %}">Portfolio</a>
         </div>
-        <nav>
-            <div class="nav-links">
-                <a href="{% url 'about' %}">About</a>
-                <a href="{% url 'services' %}">Services</a>
-                <a href="{% url 'portfolio' %}">Portfolio</a>
-            </div>
-            <div class="hamburger-menu">
-              <i class="fas fa-bars"></i>
-            </div>
-            <div class="mobile-nav-links">
-                <a href="{% url 'about' %}">About</a>
-                <a href="{% url 'services' %}">Services</a>
-                <a href="{% url 'portfolio' %}">Portfolio</a>
-            </div>
-        </nav>
+        <div class="hamburger-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="mobile-nav-links">
+          <a href="{% url 'about' %}">About</a>
+          <a href="{% url 'services' %}">Services</a>
+          <a href="{% url 'portfolio' %}">Portfolio</a>
+        </div>
+      </nav>
     </header>
 
     <section class="hero-section">
-        <div class="hero-title">
-          <div class="title">Dunosis</div>
-          <div class="subtitle">Where Knowledge Meets Power</div>
-        </div>
-        
-        <div class="description">
-            We combine unreasonable hospitality and powerful solutions to drive your business forward
-        </div>
-        
-        <div class="service-links">
-          <a href="#services-section" class="service-button">
-            <div class="button-text">Building Custom Websites</div>
-          </a>
-          
-          <a href="#services-section" class="service-button">
-            <div class="button-text">Unlocking the Value of Your Data</div>
-          </a>
-          
-          <a href="#services-section" class="service-button">
-            <div class="button-text">Providing Expert Tech Consulting</div>
-          </a>
-        </div>
-                
-        <div class="learn-more-container">
-          <a href="#services-section" onclick="onLearnMoreClick" class="learn-more">Learn More</a>
-        </div>
+      <div class="hero-title">
+        <div class="title">Dunosis</div>
+        <div class="subtitle">Where Knowledge Meets Power</div>
+      </div>
+
+      <div class="description">
+        We combine unreasonable hospitality and powerful solutions to drive your
+        business forward
+      </div>
+
+      <div class="service-links">
+        <a href="#services-section" class="service-button">
+          <div class="button-text">Building Custom Websites</div>
+        </a>
+
+        <a href="#services-section" class="service-button">
+          <div class="button-text">Unlocking the Value of Your Data</div>
+        </a>
+
+        <a href="#services-section" class="service-button">
+          <div class="button-text">Providing Expert Tech Consulting</div>
+        </a>
+      </div>
+
+      <div class="learn-more-container">
+        <a
+          href="#services-section"
+          onclick="onLearnMoreClick"
+          class="learn-more"
+          >Learn More</a
+        >
+      </div>
     </section>
 
     <section class="services-section" id="services-section">
       <h1 class="section-title">Services</h1>
       <p class="tagline">Focus On Your Business, We’ll Handle The Tech.</p>
-  
+
       <div class="services-container">
         <!-- Service 1: Web Development -->
         <div class="service-card">
           <h2>Web Development</h2>
           <ul>
-            <li>Beautiful and fully custom designs that make your business and brand stand out</li>
-            <li>Custom solutions for business needs such as e-commerce, CRM integration, and online orders</li>
-            <li>Integrated analytics, SEO keywords, and administration of your content</li>
-            <li>Advanced features like AI Chatbots for sales, customer support, and client pipelines</li>
+            <li>
+              Beautiful and fully custom designs that make your business and
+              brand stand out
+            </li>
+            <li>
+              Custom solutions for business needs such as e-commerce, CRM
+              integration, and online orders
+            </li>
+            <li>
+              Integrated analytics, SEO keywords, and administration of your
+              content
+            </li>
+            <li>
+              Advanced features like AI Chatbots for sales, customer support,
+              and client pipelines
+            </li>
           </ul>
           <a href="{% url 'services' %}" class="learn-more-btn-a">
             <button class="learn-more-btn">Learn More</button>
           </a>
         </div>
-  
+
         <!-- Service 2: Data Analytics -->
         <div class="service-card">
           <h2>Data Analytics</h2>
           <ul>
             <li>Outstanding visualizations of complex data sets</li>
-            <li>Insights into your business, customers, marketing, or competitors data</li>
-            <li>Custom live dashboards for website analytics, business needs, and production</li>
-            <li>Expert advice and consulting for your data needs and solutions</li>
+            <li>
+              Insights into your business, customers, marketing, or competitors
+              data
+            </li>
+            <li>
+              Custom live dashboards for website analytics, business needs, and
+              production
+            </li>
+            <li>
+              Expert advice and consulting for your data needs and solutions
+            </li>
           </ul>
           <a href="{% url 'services' %}" class="learn-more-btn-a">
             <button class="learn-more-btn">Learn More</button>
           </a>
         </div>
-  
+
         <!-- Service 3: Tech Consulting -->
         <div class="service-card">
           <h2>Tech Consulting</h2>
           <ul>
-            <li>Web and software recommendations that advance your business needs</li>
-            <li>Set up and configurations of automations, AI solutions, and other software accounts</li>
-            <li>Powerful research to provide extensive options that best suit your needs</li>
-            <li>Outstanding service through years of experience in mechanical and software engineering and business development</li>
+            <li>
+              Web and software recommendations that advance your business needs
+            </li>
+            <li>
+              Set up and configurations of automations, AI solutions, and other
+              software accounts
+            </li>
+            <li>
+              Powerful research to provide extensive options that best suit your
+              needs
+            </li>
+            <li>
+              Outstanding service through years of experience in mechanical and
+              software engineering and business development
+            </li>
           </ul>
           <a href="{% url 'services' %}" class="learn-more-btn-a">
             <button class="learn-more-btn">Learn More</button>
@@ -130,31 +192,45 @@
 
     <section class="reviews-section">
       <h1 class="section-title">Reviews</h1>
-      <p class="tagline">Real Results, Real Reviews — See What Our Clients Have to Say!</p>
+      <p class="tagline">
+        Real Results, Real Reviews — See What Our Clients Have to Say!
+      </p>
 
       <div class="reviews-container">
         <div class="review-item">
           <div class="review-content">
             <p>
-              “Working with Dunosis was a game-changer for our business. They delivered a clean, professional website that perfectly met our needs. The team was responsive and went above and beyond to make sure we were happy with the final product.”            </p>
+              “Working with Dunosis was a game-changer for our business. They
+              delivered a clean, professional website that perfectly met our
+              needs. The team was responsive and went above and beyond to make
+              sure we were happy with the final product.”
+            </p>
             <h3>Emily Mercado</h3>
             <h4>CEO, Plant Co.</h4>
           </div>
         </div>
-    
+
         <div class="review-item">
           <div class="review-content">
             <p>
-              ”Dunosis transformed our outdated site into a modern, user-friendly experience. Their attention to detail and commitment to meeting deadlines was outstanding. Highly recommend for any business looking to elevate their online presence.”            </p>
+              ”Dunosis transformed our outdated site into a modern,
+              user-friendly experience. Their attention to detail and commitment
+              to meeting deadlines was outstanding. Highly recommend for any
+              business looking to elevate their online presence.”
+            </p>
             <h3>Timothy Winters</h3>
             <h4>Marketing Director</h4>
           </div>
         </div>
-    
+
         <div class="review-item">
           <div class="review-content">
             <p>
-              “The team at Dunosis was incredibly skilled and professional. They understood our vision from the start and executed it flawlessly. Great communication throughout the entire process. Will definitely work with them again!”            </p>
+              “The team at Dunosis was incredibly skilled and professional. They
+              understood our vision from the start and executed it flawlessly.
+              Great communication throughout the entire process. Will definitely
+              work with them again!”
+            </p>
             <h3>Josue Quezada</h3>
             <h4>CEO, Denzity Productions</h4>
           </div>
@@ -170,35 +246,67 @@
           <p>Get started quickly and easily with a FREE consultation!</p>
           <div class="social-icons">
             <div class="social-icon-container">
-              <a href="https://www.instagram.com/dunosis_web/"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.instagram.com/dunosis_web/"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
             </div>
             <div class="social-icon-container">
-              <a href="https://www.facebook.com/profile.php?id=61565984502377"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=61565984502377"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
             </div>
             <div class="social-icon-container">
-              <a href="https://www.linkedin.com/company/dunosis/about/"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://www.linkedin.com/company/dunosis/about/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
             </div>
             <div class="social-icon-container">
-              <a href="https://wa.me/6013080127?text=Hi! I'm interested in..."><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="https://wa.me/6013080127?text=Hi! I'm interested in..."
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
             </div>
           </div>
         </div>
-    
+
         <!-- Right Section: Contact Form -->
         <div class="contact-right">
           <form class="contact-form">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="John Smith" required>
-            
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="John Smith"
+              required
+            />
+
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="test@email.com" required>
-            
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="test@email.com"
+              required
+            />
+
             <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" placeholder="+1 (601) 308-0127" required>
-            
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="+1 (601) 308-0127"
+              required
+            />
+
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="I want an awesome website for my business!" required></textarea>
-            
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="I want an awesome website for my business!"
+              required
+            ></textarea>
+
             <button type="submit" class="submit-btn">Submit</button>
           </form>
         </div>
@@ -206,9 +314,14 @@
     </section>
 
     <footer>
-          <!-- Left Section: Logo -->
+      <!-- Left Section: Logo -->
       <div class="footer-logo">
-        <img src="../../static/landing/img/logo.png" alt="Dunosis Logo" width="50" height="50">
+        <img
+          src="../../static/landing/img/logo.png"
+          alt="Dunosis Logo"
+          width="50"
+          height="50"
+        />
         <span>DUNOSIS</span>
       </div>
 
@@ -220,34 +333,48 @@
       </nav>
 
       <!-- Right Section: Social Icons and Contact -->
-       <div class="footer-social-icons">
+      <div class="footer-social-icons">
         <div class="social-icons">
           <div class="social-icon-container">
-            <a href="https://www.instagram.com/dunosis_web/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.instagram.com/dunosis_web/"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
           </div>
           <div class="social-icon-container">
-            <a href="https://www.facebook.com/profile.php?id=61565984502377"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61565984502377"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
           </div>
           <div class="social-icon-container">
-            <a href="https://www.linkedin.com/company/dunosis/about/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/company/dunosis/about/"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
           </div>
           <div class="social-icon-container">
-            <a href="https://wa.me/6013080127?text=Hi! I'm interested in..."><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://wa.me/6013080127?text=Hi! I'm interested in..."
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
           </div>
         </div>
-       </div>
+      </div>
       <div class="footer-contact">
         <div class="contact-info">
           <p><i class="fa fa-map-marker"></i> Chicago, IL</p>
           <p><i class="fa fa-phone"></i> +1 (601) 308-0127</p>
           <p><i class="fa fa-envelope"></i> info@dunosis.com</p>
-          
         </div>
       </div>
     </footer>
 
-       <!-- Bootstrap JS CDN -->
-       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-       <script type="text/javascript" src="{% static 'landing/js/script.js' %}"></script>
-</body>
+    <!-- Bootstrap JS CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'landing/js/script.js' %}"
+    ></script>
+  </body>
 </html>
